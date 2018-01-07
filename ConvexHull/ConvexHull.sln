@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull", "ConvexHull.csproj", "{96D692CB-6D72-EBC4-1D55-FEF146AF3E18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull.Plugins", "ConvexHull.Plugins.csproj", "{AC850A2C-1099-892A-65CD-115B9F57DD32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull.Editor.Plugins", "ConvexHull.Editor.Plugins.csproj", "{68F1886F-3ACE-7637-7CBF-FD0F40B0EFDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96D692CB-6D72-EBC4-1D55-FEF146AF3E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D692CB-6D72-EBC4-1D55-FEF146AF3E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D692CB-6D72-EBC4-1D55-FEF146AF3E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D692CB-6D72-EBC4-1D55-FEF146AF3E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC850A2C-1099-892A-65CD-115B9F57DD32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC850A2C-1099-892A-65CD-115B9F57DD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC850A2C-1099-892A-65CD-115B9F57DD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC850A2C-1099-892A-65CD-115B9F57DD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F1886F-3ACE-7637-7CBF-FD0F40B0EFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F1886F-3ACE-7637-7CBF-FD0F40B0EFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F1886F-3ACE-7637-7CBF-FD0F40B0EFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F1886F-3ACE-7637-7CBF-FD0F40B0EFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
