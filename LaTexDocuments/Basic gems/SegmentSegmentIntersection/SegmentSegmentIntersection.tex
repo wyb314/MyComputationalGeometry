@@ -1,0 +1,74 @@
+\documentclass[UTF8,12pt]{article}
+\usepackage{CTEX}
+\usepackage{graphicx}
+\usepackage{geometry}
+%opening
+\title{线段求交问题}
+\author{吴天}
+
+\begin{document}
+\maketitle
+\section{问题}
+	2D平面内的两条线段AB与CD，分析两条线段之间的关系。比如两条线段是否有交点，如果无交点，是否是平行的。
+	
+\section{分析}
+	还是利用上次的老办法,假设交点为Q，列方程：
+	\begin{eqnarray}
+	A+(B-A) * t1 = Q \\
+	C+(D-C) * t2 = Q
+	\end{eqnarray}\\
+	于是，我们有如下方程：
+	\begin{equation}
+	\left[^{A_x}_{Ay}\right] + \left[^{Bx-Ax}_{By-Ay}\right] * t1 = 	\left[^{Cx}_{Cy}\right] +  \left[^{Dx-Cx}_{Dy-Cy}\right] * t2
+	\end{equation}
+	方程$(3)$可写成：
+	\begin{eqnarray}
+		(A_x - C_x)(D_y - C_y)+(B_x -A_x)(D_y-C_y)*t1 = (D_X - C_x)(D_y - C_y)*t2\\
+		(A_y-C_y)(D_x-C_x) +(B_y-A_y)(D_x-C_x) * t1 = (D_y-C_y)(D_x-C_x) * t2
+	\end{eqnarray}
+	消元t2得到：
+	\begin{equation}
+	t1 = \frac{(A_y-C_y)(D_x-C_x) - (A_x-C_x)(D_y-C_y)}{(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)}
+	\end{equation}
+	我不知道大家看到方程$(6)$会有什么想法，就我的直觉来说，如果等号右边的分式的分母为0，则t1不存在，也就是$$(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)=0$$
+	如果你足够敏锐：$$\frac{B_y-A_y}{B_x-A_x}=\frac{D_y-C_y}{D_x-C_x}$$
+	这让我看到斜率一样，共线或平行。\\
+	我们用同样的方法得到：
+	\begin{equation}
+	t2 = \frac{(B_y-A_y)(C_x-A_x) - (B_x-A_x)(C_y-A_y)}{(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)}
+	\end{equation}
+	再一次印证了平行的条件的猜测。
+	那么问题来了，相交的条件又是什么呢？首先:
+	$$(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)\neq0$$
+	然后，我们的t1和t2必须在$\left[0,1\right]$之间，既：
+	\begin{eqnarray}
+	0<=t1<=1\\
+	0<=t2<=1
+	\end{eqnarray}
+	看起来我们算是已经解决了问题，不过得多说几句，如果我们要把这套计算过程用计算机程序来实现，真的得注意一些事情。假定$a=(A_y-C_y)(D_x-C_x) - (A_x-C_x)(D_y-C_y), b=(B_y-A_y)(C_x-A_x) - (B_x-A_x)(C_y-A_y) , c=(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)$。也就是$t1=\frac{a}{c}$,$t2=\frac{b}{c}$。\\
+	得考虑下线段$AB$与$CD$共线时的特殊情形了，也就是$c=0$这种情况下：
+	\begin{itemize}
+		\item AB与CD重叠，存在一个或者多个交点
+		\item AB与CD不重叠，无交点
+	\end{itemize}
+	先讨论第一种情况，如果AB与CD共线，我们得出:
+	\begin{eqnarray}
+		\frac{B_y-A_y}{B_x-A_x} = \frac{A_y-C_y}{A_x-C_x}\\
+		\frac{A_y-C_y}{A_x-C_x} = \frac{D_y-C_y}{D_x-C_x}
+	\end{eqnarray}
+	根据对角线法则，$(10)$和$(11)$与$a$和$b$是密切相关的。另一方面，$c=0$，就几何意义上来讲，如果$a=0,c=0$，一定有$b=0$。你能看出来吗？接下来的工作是确定交点到底有多少个了，可能是一个，也可能是线段的一部分。首先我们得对点$A,B,C,D$以x坐标为参考做由左向右，由上到下的排序，得到经过排序后的线段$AB$，$CD$，要知道，排序很重要！接下来再做一次以一维相交性检测，通过少量的计算存在以下情况：
+	\begin{itemize}
+		\item ALL ：线段CD在A点左侧
+		\item BRR ：线段CD在B点右侧
+		\item LAR ：线段CD在A点左右两侧
+		\item LBR ：线段CD在B点左右两侧
+		\item LA ：线段D点与A点重合
+		\item BR ：线段C点与B点重合
+	\end{itemize}
+	我们可以确定的是：当$a=0,b=0,c=0$时，AB与CD也是相交的。
+	\section{结论：}
+	\begin{itemize}
+		\item 当$(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)\neq0$时，一定有一个交点Q;
+		\item 当$(B_x-A_x)(D_y-C_y)-(B_y-A_y)(D_x-C_x)=0$时，$AB$与$CD$平行或共线，特殊的,当且仅当$a=0,b=0,c=0$时，AB与CD共线且至少有一点重合。
+	\end{itemize}
+\end{document}
