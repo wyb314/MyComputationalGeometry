@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.7)  2 FEB 2018 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.7)  2 FEB 2018 18:56
 entering extended mode
 **./圆圆求交.tex
 (圆圆求交.tex
@@ -1213,10 +1213,10 @@ Package pdftex.def Info: pic3.png used on input line 40.
  <./pic0.png>]
 [2 <./pic1.png> <./pic2.png>] [3 <./pic3.png>] [4] (圆圆求交.aux) ) 
 Here is how much of TeX's memory you used:
- 14512 strings out of 493323
- 271953 string characters out of 3136061
+ 14520 strings out of 493323
+ 272048 string characters out of 3136061
  303983 words of memory out of 3000000
- 17726 multiletter control sequences out of 15000+200000
+ 17734 multiletter control sequences out of 15000+200000
  552752 words of font info for 104 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,46p,10441b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1248,7 +1248,7 @@ nstallerSite/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/ApplicationIns
 tallerSite/Miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/ApplicationInstal
 lerSite/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/ApplicationInstall
 erSite/Miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on 圆圆求交.pdf (4 pages, 286975 bytes).
+Output written on 圆圆求交.pdf (4 pages, 289531 bytes).
 PDF statistics:
  328 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
