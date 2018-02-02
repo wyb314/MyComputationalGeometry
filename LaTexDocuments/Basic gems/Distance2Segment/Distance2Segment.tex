@@ -75,13 +75,13 @@ Gave a 2D point P , a 2D segment AB , found the closest point Q that from P to A
 		\end{equation}
 		Set: 
 		\begin{eqnarray}
-		a1 = (A_x-P_x)*(A_x-B_x)+(A_y-P_y) * (A_y-B_y)\\
-		a2 = (P_x-B_x)*(A_x-B_x)+(P_y-B_y) * (A_y-B_y)
+		a_1 = (A_x-P_x)*(A_x-B_x)+(A_y-P_y) * (A_y-B_y)\\
+		a_2 = (P_x-B_x)*(A_x-B_x)+(P_y-B_y) * (A_y-B_y)
 		\end{eqnarray}
 		
 		Follow : 
 		\begin{equation}
-		\vec{Q} =\vec{A} +  \frac{a1*(\vec{B} - \vec{A})}{a1 + a2}
+		\vec{Q} =\vec{A} +  \frac{a_1*(\vec{B} - \vec{A})}{a_1 + a_2}
 		\end{equation}
 \end{enumerate}
 
